@@ -22,7 +22,7 @@
         exit;
     }
 
-    $stmt = $conn->prepare("SELECT id , username , email , password , image FROM users WHERE email=?");
+    $stmt = $conn->prepare("SELECT id , username , email , password , image , role FROM users WHERE email=? LIMIT 1");
     $stmt->bind_param('s', $email);
     if(!$stmt->execute()){
         echo json_encode([
@@ -38,11 +38,13 @@
         if(password_verify($password , $row['password'])){
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
+            $_SESSION['role'] = $row['role'];
             echo json_encode([
                 "status"=>"success",
                 "message"=>"select row succes",
                 "username"=> $row['username'],
                 "image"=> $row["image"],
+                "role"=> $row['role']
 
             ]);
         }else{
