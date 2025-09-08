@@ -1,0 +1,37 @@
+
+    .bell,.mail{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(244, 9, 9, 0.056);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .bell{
+      color: red;
+    }
+    .mail{
+      color: rgba(0, 0, 0, 0.573);
+    }
+  
+
+
+
+.moon{
+    width: 30px;
+    height: 30px;
+background-color: rgba(145, 145, 145, 0.338);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.moon:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+.moon:active{
+    background-color: rgb(47, 144, 255);
+
+}
