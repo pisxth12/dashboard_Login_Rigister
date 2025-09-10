@@ -3,7 +3,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: rgba(244, 9, 9, 0.056);
+      background-color: rgba(155, 155, 155, 0.056);
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -11,10 +11,7 @@
     .bell{
       color: red;
     }
-    .mail{
-      color: rgba(0, 0, 0, 0.573);
-    }
-  
+
 
 
 

@@ -60,12 +60,12 @@ body {
       flex-direction: column;
     }
     .dashboard_content{
-      background-color: rgba(206, 208, 208, 0.955);
+     
       width: 100%;
     }
 
     .btn-nav{
-      background-color: rgb(255, 255, 255) !important;
+     
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
     .btn-nav:hover{
@@ -73,8 +73,7 @@ body {
       color: white !important;
     }
     .navBar_dashboard{
-      background-color: rgb(255, 255, 255);
-    
+ 
       /* padding: 10px; */
       padding: 0 10px;
       height: 10%;
@@ -90,8 +89,6 @@ body {
     }
 
 .content_info{
-  background-color: rgba(226, 226, 226, 0.441);
-  /* padding: 10px; */
   height: 90%;
   width: 100%;
 
