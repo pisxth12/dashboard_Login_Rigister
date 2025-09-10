@@ -44,3 +44,4 @@ function showDashboard() {
 document.addEventListener("DOMContentLoaded", function() {
     showDashboard(); // Call this here
 });
+

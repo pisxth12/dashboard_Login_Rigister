@@ -32,3 +32,12 @@ background-color: rgba(145, 145, 145, 0.338);
     background-color: rgb(47, 144, 255);
 
 }
+.bag{
+    background-color: rgba(205, 205, 205, 0.579);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}

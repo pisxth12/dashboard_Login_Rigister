@@ -1,0 +1,13 @@
+.title_add_product{
+    background-color: rgba(211, 211, 211, 0.521);
+    padding: 10px;
+}
+.product_add_content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product_add_content>input{
+    padding: 4px;
+    border-radius: 5px;
+}
