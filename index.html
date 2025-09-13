@@ -19,9 +19,9 @@
 </head>
 <body>
   <div class="container-fluids d-flex">
-      <div class="dashboard_menu d-lg-block d-none ">
+      <div class="dashboard_menu d-lg-block d-none rounded-3 ">
        <div class="title d-flex justify-content-center p-2">
-         <h3>Dashboard </h3>
+         <h3>Sorn Piseth</h3>
        </div>
 
 
@@ -36,12 +36,10 @@
       </div>
 
       <div class="dashboard_content ">
-        <nav class="navBar_dashboard shadow-lg">
-          <div class="search_content">
-            <div class="search_bar">
-              <input type="text" class="search_input" placeholder="Search...">
-               <div class="search"><i class="fa-solid fa-search"></i></div>
-            </div>
+        <nav class="navBar_dashboard shadow-lg rounded-3">
+
+          <div class="title d-flex align-items-center">
+            <h3 class="fw-bold">Dashboard</h3>
           </div>
           
 
@@ -145,7 +143,7 @@
                               <!-- Image Upload -->
                               <div class="mb-1">
                                 <label for="image" class="form-label">Upload Image</label>
-                                <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                                <input type="file" class="form-control" id="registerImage" name="image" accept="image/*">
                               </div>
 
                               <!-- Submit -->
@@ -167,77 +165,31 @@
 
         <div class="content_info  overflow-y-auto ">
 
-               <div id="main_content" class="p-3 mt-3" >
-                <div class="title_add_product d-flex justify-content-between align-items-center">
-                  <div class="left">
-                    <h5 style="text-transform: uppercase; font-weight: bold;" class="">Add produt</h5>
+            <div id="main_content" class="p-3 mt-3">
+                  <div class="title">
+
+                         <div class="left d-flex gap-2 align-items-center">
+                   <div class="bag">
+                      <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+
+                    <div class="title-content d-flex flex-column  ">
+                      <h5 class="bg-secondary">Wellcome to website</h5>
+                      <p class="bg-danger">Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+
                   </div>
+                  <div class="right">
 
-                <div class="add_product_content">
-    <button type="button" class="btn btn-primary btn-modal1" data-bs-toggle="modal" data-bs-target="#modal1">
-        Add Product
-    </button>
 
-    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal1Label">Add Product</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
                 </div>
-                <div class="modal-body">
-                    <form id="add_product" method="POST" enctype="multipart/form-data">
-                        <div class="product_add_content">
-                            <label for="productName">Product Name</label>
-                            <input type="text" id="productName" name="productName" required autocomplete="off">
-                        </div>
-                        <div class="product_add_content">
-                            <label for="description">Description</label>
-                            <textarea id="description" name="description" rows="3"></textarea>
-                        </div>
-                        <div class="product_add_content">
-                            <label for="price">Price</label>
-                            <input type="number" id="price" name="price" step="0.01" required autocomplete="off">
-                        </div>
-                        <div class="product_add_content">
-                            <label for="stockQuantity">Stock Quantity</label>
-                            <input type="number" id="stockQuantity" name="stockQuantity" required autocomplete="off">
-                        </div>
-                        <div class="product_add_content">
-                            <label for="category">Category</label>
-                            <select id="category" name="category" required>
-                                <option value="">Select Category</option>
-                                <option value="Men">Men</option>
-                                <option value="Women">Women</option>
-                                <option value="Electronics">Electronics</option>
-                            </select>
-                        </div>
-                        <div class="product_add_content">
-                            <label for="image">Product Image</label>
-                            <input type="file" id="image" name="image" accept="image/*">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Save Product</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+
+              </div>
 
 
 
-
-
-                </div>
-                <div class="show-product row mt-4"></div>
-
-            
-               
-
-                </div>
 
 
                 <div id="dashboard_template" class="d-none" style="display: none;">
@@ -245,14 +197,7 @@
                       <div class="title">
                         <h4>Dashboad</h4>
                       </div>
-                      <div class="option d-flex gap-2 align-items-center">
-                        <select>
-                          <option value="">Select </option>
-                          <option value="man">Man</option>
-                          <option value="Women">Women</option>
-                        </select>
-                        
-                      </div>
+                     
                     </div>
                     <div class="notification ">
                       <p>Lorem ipsum dolor sit.</p>
@@ -291,7 +236,6 @@
 
                   </div>
 
-
                   <div id="home_template" class="d-none" >
                     <h3>Lorem ipsum dolor sit amet.</h3>
                   </div>
@@ -304,150 +248,309 @@
 
                         <div class="select-option">
                           <select id="genderFilter" class="rounded-1 p-1 border-2 border-secondary">
-                            <option value="">Select gender</option>
-                            <option value="men's clothing">Male</option>
-                            <option value="women's clothing">Female</option>
+                            <option value="">Select Type</option>
+                            <option value="hypercar">Hypercar</option>
+                            <option value="supercar">Supercarr</option>
                           </select>
                         </div>
                       </div>
 
                       <div class="product-content shadow-lg p-3">
                         <div id="productList" class="row g-3">
-                      <!-- result here product here -->
 
                         </div>
                       </div>
+                      <script src="./api/js//fetchProduct.js"></script>
+                     
                     </div>
 
-                    <div id="add_product" class="d-none " >
-                <div class="title">
+                  <div id="add_product" class="d-none " >
 
-                         <div class="left d-flex gap-2 align-items-center">
-                   <div class="bag">
-                      <i class="fa-solid fa-bag-shopping"></i>
-                    </div>
+                            
+                      <div class="title_add_product d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <h5 style="text-transform: uppercase; font-weight: bold;">Add Product</h5>
+                        </div>
 
-                    <div class="title-content d-flex flex-column  ">
-                      <h5 class="bg-secondary">Wellcome to website</h5>
-                      <p class="bg-danger">Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
+                        <div class="add_product_content" id="ddd">
+                          <button type="button" class="btn btn-primary btn-modal1" data-bs-toggle="modal" data-bs-target="#modal1">
+                            Add Product
+                          </button>
 
-                  </div>
-                  <div class="right">
-
-
-                  </div>
-                </div>
-
-                    </div>
-
-              </div>      
-        </div> 
-        
-      </div>
-  </div>
-<script>
-  $(document).ready(function(){
-
-    // Submit Add Product Form
-    $('#add_product').on('submit', function(e){
-        e.preventDefault();
-        var formData = new FormData(this);
-
-        $.ajax({
-            url: 'http://localhost/dashboard/api/products/add_product.php',
-            type: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function(response){
-                alert(response);
-                $('#add_product')[0].reset();
-                $('#modal1').modal('hide');
-                loadProducts(); // Refresh product list
-            },
-            error: function(){
-                alert('Error adding product.');
-            }
-        });
-    });
-
-    // Load products
-    function loadProducts(){
-        $.ajax({
-            url: 'http://localhost/dashboard/api/products/fetch_product.php',
-            type: 'GET',
-            dataType: 'json',
-            success: function(products){
-                let html = '';
-                if(products.length > 0){
-                    products.forEach(function(p){
-                        html += `
-                        <div class="col-md-3 mb-4">
-                            <div class="card h-100 text-center">
-                                <img src="${p.image_url}" class="card-img-top" alt="${p.productName}" style="height:150px; object-fit:cover;">
-                                <div class="card-body">
-                                    <h5 class="card-title">${p.productName}</h5>
-                                    <p class="card-text">Price: $${p.price}</p>
-                                    <p class="card-text">Stock: ${p.stockQuantity}</p>
-                                    <p class="card-text">Category: ${p.category}</p>
+                          <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="modal1Label">Add Product</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
+                                <div class="modal-body">
+
+
+                                  <form id="addProductForm" enctype="multipart/form-data">
+                                    <div class="product_add_content mb-3">
+                                      <label for="productName" class="form-label" >Product Name</label>
+                                      <input type="text" id="productName" name="productName" class="form-control" required autocomplete="off">
+                                    </div>
+
+                                    <div class="product_add_content mb-3">
+                                      <label for="price" class="form-label">Price</label>
+                                      <input type="number" id="price" name="price" class="form-control" step="0.01" required autocomplete="off">
+                                    </div>
+
+                                    <div class="product_add_content mb-3">
+                                      <label for="productImage" class="form-label">Product Image</label>
+                                      <input type="file" id="productImage" name="productImage" class="form-control" accept="image/*">
+                                    </div>
+
+                                    <div class="product_add_content mb-3">
+                                      <label for="description" class="form-label">Description</label>
+                                      <textarea id="description" name="description" class="form-control" rows="3"></textarea>
+                                    </div>
+
+                                    <div id="response" class="mb-2 text-success"></div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="submit" class="btn btn-primary">Save Product</button>
+                                    </div>
+                                  </form>
+
+                              </div>
+                              </div>
                             </div>
-                        </div>`;
-                    });
+                          </div>
+                        </div>
+                      </div>
+                      <div class="show-product mt-4 shadow-lg ">
+                              <div id="product-display" class="p-4 overflow-y-scroll d-flex  flex-wrap gap-1 m-2 "   >
+                              <!-- result add product here-->
+                              </div>
+                      </div>
+
+                      <script>
+                        $(document).ready(function(){
+
+  // Load all products
+  function loadProducts(){
+    $.ajax({
+      url: "http://localhost/dashboards/api/products/fetch_product.php",
+      type: "GET",
+      dataType: "JSON",
+      success: function(products){
+        let showHTML = "";
+        if(products.length){
+          products.forEach(product=>{
+            showHTML += `
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top object-fit-cover" src="${product.image_url}" alt="${product.productName}" style="height:200px;">
+              <div class="card-body">
+                <div class="info d-flex justify-content-between py-2">
+                  <h5 class="card-title">${product.productName}</h5>
+                  <h5>$${parseFloat(product.price).toFixed(2)}</h5>
+                </div>
+                <p class="card-text">${product.description}</p>
+                <button class="remove_product_btn btn btn-danger" data-product="${product.productName}">Remove</button>
+              </div>
+            </div>`;
+          });
+        } else {
+          showHTML = `<p>No products found.</p>`;
+        }
+        $("#product-display").html(showHTML);
+      },
+      error: function(xhr){
+        console.log(xhr.responseText);
+      }
+    });
+  }
+
+  loadProducts(); // initial load
+
+  // Add Product Form Submit
+  $("#addProductForm").on('submit', function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+
+    $.ajax({
+      url: "http://localhost/dashboards/api/admin/add_product.php",
+      type: "POST",
+      data: formData,
+      contentType: false,
+      processData: false,
+      dataType: "JSON",
+      success: function(response){
+        if(response.status === "success"){
+          alert(response.message);
+          $("#addProductForm")[0].reset();
+          var productModal = bootstrap.Modal.getInstance(document.getElementById('modal1'));
+          productModal.hide();
+          loadProducts();
+        } else {
+          alert("Failed: " + response.message);
+        }
+      },
+      error: function(xhr){
+        console.log(xhr.responseText);
+        alert("Error uploading data");
+      }
+    });
+  });
+
+  // Remove Product
+ $(document).off('click', '.remove_product_btn').on('click', '.remove_product_btn', function(){
+    let productName = $(this).data('product');
+    let card = $(this).closest('.card');
+
+    if(confirm(`Are you sure you want to remove ${productName}?`)){
+        $.ajax({
+            url: "http://localhost/dashboards/api/admin/delete_product.php",
+            type: "POST",
+            data: { productName: productName },
+            dataType: "JSON",
+            success: function(response){
+                if(response.status === "success"){
+                    alert(response.message);
+                    card.remove();
+                
+                     loadProducts(); 
                 } else {
-                    html = '<p class="text-center">No products found.</p>';
+                    alert("Error: " + response.message);
                 }
-                $('.show-product').html(html);
             },
             error: function(xhr){
                 console.log(xhr.responseText);
             }
         });
     }
-
-    loadProducts(); // Initial load
 });
 
-</script>
-  
+
+});
+
+                      </script>
+
+                      <!-- <script>
+                          $(document).ready(function(){
+
+
+                            function loadProducts(){
+                              $.ajax({
+                                url:"http://localhost/dashboards/api/products/fetch_product.php",
+                                type: "GET",
+                                dataType:"JSON",
+                                success: function(products){
+                                  showHTML = ""
+                                  if(products.length){
+                                    products.forEach(product=>{
+                                      showHTML += `
+                                        <div class="card " style="width: 18rem;" >
+                                            <img class="card-img-top object-fit-cover" src="${product.image_url}" alt="${product.productName}" >
+                                            <div class="card-body">
+                                              <div class="info d-flex justify-content-between py-3">
+                                                <h5 class="card-title">${product.productName}</h5>
+                                                <h5>$${parseFloat(product.price).toFixed(2)}</h5>
+                                              </div>
+                                              <p class="card-text">${product.description}</p>
+                                              <button id="remove_product_btn" class="remove_product_btn btn btn-danger" data-product="${product.productName}">Remove</button>
+                                            </div>
+                                          </div>
+                                      `
+                                    })
+                                  }else{
+                                    showHTML = `<p>No products found.</p>`;
+                                  }
+                                  $("#product-display").html(showHTML)
+                                },
+                                error: function(xhr){
+                                  console.log(xhr.responseText);
+                                }
+                              });
+                            }
+
+                            loadProducts()
+
+
+
+
+                            $("#addProductForm").on('submit' , function(e){
+                              e.preventDefault();
+                              var formData = new FormData(this);
+
+                              $.ajax({
+                                url:"http://localhost/dashboards/api/admin/add_product.php",
+                                type: "POST",
+                                data: formData,
+                                contentType:false,
+                                processData:false,
+                                dataType:"JSON",
+                                success: function(response){
+                                  if(response.status ==="success"){
+                                    alert(response.message);
+                                    $("#addProductForm")[0].reset();
+                                    var productModal = bootstrap.Modal.getInstance(document.getElementById('modal1'));
+                                    productModal.hide();
+                                    loadProducts()
+
+
+                                  }else{
+                                    alert("Faild" + response.message);
+                                  }
+                                },
+                                error: function(xhr){
+                                  console.log(xhr.responseText);
+                                  alert("Error Uploding data");
+                                }
+                              })
+
+                            })
+
+                            
+
+
+
+
+                             $(document).on('click', '#remove_product_btn', function(){
+        let productName = $(this).data('product');
+        let card = $(this).closest('.card');
+
+        if(confirm(`Are you sure you want to remove ${productName}?`)){
+            $.ajax({
+                url: "http://localhost/dashboards/api/admin/delete_product.php",
+                type: "POST",
+                data: { productName: productName },
+                success: function(response){
+                    if(response.status === "success"){
+                        alert(response.message);
+                        card.remove();
+                    } else {
+                        alert("Error: " + response.message);
+                    }
+                },
+                error: function(xhr){
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+    });
+
+                            });
+
+                        </script>
+                         -->
+              </div>
+
+              </div>      
+        </div> 
+      </div>
+  </div>
 
 </body>
 <script src="./api/js/darkmode.js"></script>
 <script src="./api/js/chart.js"></script>
-<script src="./api/js/products.js"></script>
 <script src="./api/js/userLogin.js"></script>
 <script src="./api/js/add_products.js"></script>
-<script>
-$(document).ready(function () {
-    let role = localStorage.getItem("role");
-
-    if (role !== "admin") {
-        $('[data-content="dashboard"]').hide();
-        $('[data-content="add_product"]').hide();
-    }
-
-    $('.btn-nav').click(function () {
-        let contentType = $(this).data('content');
-        $('#main_content').empty();
-
-        if (contentType === 'home') {
-            $('#main_content').html($('#home_template').html());
-        } else if (contentType === 'product') {
-            $('#main_content').html($('#product_template').html());
-        } else if (contentType === "dashboard") {
-            $('#main_content').html($('#dashboard_template').html());
-            initCharts();
-        } else if (contentType === "add_product") {
-            $('#main_content').html($('#add_product').html());
-        }
-    });
-});
-
-
-
-
-</script>
+<script src="./api//js/admin_user_option.js"></script>
+<script></script>
 
 
 </html>

@@ -1,23 +1,20 @@
 <?php
+session_start();
 include 'db.php';
 
-$sql = "SELECT * FROM products ORDER BY created_at DESC";
+$sql = "SELECT productName , price , description , image FROM products ORDER BY id DESC";
+
 $result = $conn->query($sql);
 
 $products = [];
+while($row = $result->fetch_assoc()){
+    $products[] = [
+        "productName"=> $row["productName"],
+        "price"=>$row['price'],
+        "description"=> $row['description'],
+        "image_url"=> !empty($row['image']) ? "http://localhost/dashboards/api/admin/productImage/" . $row['image']  : "http://localhost/dashboards/assets/no-image.png"
 
-if ($result && $result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $row['image_url'] = !empty($row['image'])
-            ? 'http://localhost/dashboard/api/products/uploads/' . $row['image']
-            : 'http://localhost/dashboard/api/products/uploads/placeholder.png';
-
-        $products[] = $row;
-    }
+    ];
 }
-
-header('Content-Type: application/json');
 echo json_encode($products);
-
-$conn->close();
 ?>

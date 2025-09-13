@@ -22,7 +22,7 @@ $(document).ready(function(){
           localStorage.removeItem('image');
           localStorage.removeItem('role'); 
 
-          $.get("logout.php", function(){
+          $.get("http://localhost/dashboards/api/login.php", function(){
             location.reload();
           });
           location.reload();
@@ -37,7 +37,7 @@ $(document).ready(function(){
 
       var formData = new FormData(this);
       $.ajax({
-        url:"http://localhost/dashboard/api/register.php",
+        url:"http://localhost/dashboards/api/register.php",
         method: "POST",
         data: formData,
         contentType: false,
@@ -74,7 +74,7 @@ $(document).ready(function(){
       var formData2 = new FormData(this);
 
       $.ajax({
-        url:"http://localhost/dashboard/api/login.php",
+        url:"http://localhost/dashboards/api/login.php",
         method: "POST",
         data: formData2,
         contentType: false,
